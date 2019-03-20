@@ -1,0 +1,47 @@
+<!--pages/courseDetails/courseDetails.wxml-->
+<view class='main_header'>
+  <swiper indicator-dots interval="3000" duration="1000" autoplay='true' circular>
+    <block wx:for="{{info.imgBox}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <swiper-item>
+        <image src="{{itemName.img_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='bg_f p_20'>
+  <view class='f_34'>{{info.title}}
+  </view>
+  <view class='c_999 f_24 mt_20'>课程时间:{{info.time}}</view>
+  <view class='c_999 f_28 mt_20'>课程时长:{{info.duration}}</view>
+  <view class='flex_cb mt_20'>
+    <view class='c_ea5 f_34'>￥{{info.price}}</view>
+    <view class='f_28'>还可预约
+      <text class='c_ffb'>{{info.number}}</text>人</view>
+  </view>
+</view>
+<view class='flex_cb bor_t p_20 bg_f' data-id='{{info.sid}}' bindtap='bindtapStore'>
+  <view class='flex_i'>
+    <image src='../../images/dian.png' class='store'></image>
+    <view class='f_30 ml_20'>{{info.store_name}}</view>
+  </view>
+  <image src='../../images/last_Dawn.png' class='arrow'></image>
+</view>
+<view class='teacher_body bg_f p_20'>
+  <view class='f_34 mb_20'>老师介绍</view>
+  <view class='f_28 p_20 bor_t flex'>
+    <image src='{{info.head}}' class='course_img'></image>
+    <view class='ml_20 course_right'>
+      <view class='f_32'>{{info.user_name}}</view>
+      <view class='teacher_text mt_20'>{{info.t_content}}</view>
+    </view>
+  </view>
+  <view class='flex_cb'>
+    <view></view>
+    <navigator class='f_24 c_999 bor_b' url='../teacherDetails/teacherDetails?id={{info.sid}}'>更多详情></navigator>
+  </view>
+</view>
+<view class='teacher_body bg_f p_20'>
+  <view class='f_34 mb_20'>课程介绍</view>
+  <view class='f_28 p_20 teacher_text bor_t'>{{info.c_content}}</view>
+</view>
+<button class='s_foot' data-id='{{info.id}}' bindtap='appointment'>立即预约</button>

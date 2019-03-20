@@ -1,0 +1,8 @@
+/* pages/appointmentDetails/appointmentDetails.wxss */
+.location{
+  width: 70%;
+  text-align: right;
+}
+.s_foot{
+  margin-top: 60rpx;
+}

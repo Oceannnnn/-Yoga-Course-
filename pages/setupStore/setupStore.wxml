@@ -1,0 +1,50 @@
+<!--pages/setupStore/setupStore.wxml-->
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>展示图片</view>
+  <view class='f_24 c_999 upload flex_faj c_999 pr' bindtap='upload' data-count='1'>
+    <image class='img' src='{{st_pic}}' wx:if="{{st_pic!=''}}"></image>
+    <image src='../../images/add_i.png' class='add_i' wx:if="{{st_pic==''}}"></image>
+  </view>
+</view>
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>门店名称</view>
+  <input placeholder='请输入门店名称' class='input ml_20 sheng f_28' value='{{shop_title}}' bindinput='bindName'></input>
+</view>
+<view class='p_20 flex f_32 bor_b'>
+  <view class='input_left'>门店图片</view>
+  <view class='input ml_20'>
+    <view class='f_28 c_999'>为了保证显示效果，建议上传3张以上图片</view>
+    <view class='flex_f mt_20'>
+      <block wx:key="imgbox" wx:for="{{imgbox}}" wx:for-index="index">
+        <view class='pr mr_10 mb_10'>
+          <view class='upload pr on'>
+            <image class='img' src='{{item.image}}'></image>
+            <view class='img-de pr' bindtap='delImage' data-deindex='{{index}}'>
+              <image class='img' src='../../images/cha.png'></image>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class='jia c_999 upload flex_faj c_999 on' bindtap='upload' data-count='9' wx:if="{{imgbox.length<9}}">
+        <image src='../../images/add_i.png' class='add_i'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>营业时间</view>
+  <view class='search_body flex_i f_28 on'>
+    <picker mode="time" value="{{s_time}}" end="{{e_time}}" bindchange="bindDateChange" class='mr_20 c_999'>
+      <view class="picker">
+        {{s_time}}
+      </view>
+    </picker>
+    至
+    <picker mode="time" value="{{e_time}}" start="{{s_time}}" end="2050-01-01" bindchange="bindDateChange2" class='ml_20 c_999'>
+      <view class="picker">
+        {{e_time}}
+      </view>
+    </picker>
+  </view>
+</view>
+<button class='s_foot c_f f_32 mb_20' bindtap='bindtap'>提交</button>

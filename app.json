@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/distributionCommission/distributionCommission",
+    "pages/distributionExpressive/distributionExpressive",
+    "pages/distribution/distribution",
+    "pages/record/record",
+    "pages/recharge/recharge",
+    "pages/distributionMoney/distributionMoney",
+    "pages/distributionQRCode/distributionQRCode",
+    "pages/balance/balance",
+    "pages/recordPurchase/recordPurchase",
+    "pages/team/team",  
+    "pages/teaAppointment/teaAppointment",
+    "pages/teaMy/teaMy",
+    "pages/storeMy/storeMy",
+    "pages/my/my",
+    "pages/courseRelease/courseRelease",
+    "pages/managementTeacher/managementTeacher",
+    "pages/teacherAdd/teacherAdd",
+    "pages/setupStore/setupStore",
+    "pages/teacher/teacher",
+    "pages/information/information",
+    "pages/store/store",
+    "pages/about/about",
+    "pages/appointmentDetails/appointmentDetails",
+    "pages/appointment/appointment",
+    "pages/comment/comment",
+    "pages/course/course",
+    "pages/comments/comments",
+    "pages/courseDetails/courseDetails",
+    "pages/teacherDetails/teacherDetails",
+    "pages/nearby/nearby"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "在线预约课程",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#989898",
+    "backgroundColor": "#fff",
+    "selectedColor": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_active.png"
+      },
+      {
+        "pagePath": "pages/nearby/nearby",
+        "text": "附近门店",
+        "iconPath": "images/nearby.png",
+        "selectedIconPath": "images/nearby_active.png"
+      },
+      {
+        "pagePath": "pages/appointment/appointment",
+        "text": "预约课程",
+        "iconPath": "images/appointment.png",
+        "selectedIconPath": "images/appointment_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_active.png"
+      }
+    ]
+  }
+}

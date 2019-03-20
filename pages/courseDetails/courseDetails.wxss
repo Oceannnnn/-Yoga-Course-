@@ -1,0 +1,18 @@
+/* pages/courseDetails/courseDetails.wxss */
+@import "../index/index.wxss";
+.store{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.course_img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.course_right{
+  width: 75%;
+}
+.s_foot{
+  margin: 60rpx auto;
+}

@@ -1,0 +1,71 @@
+.main_header swiper {
+  height: 375rpx;
+  width: 100%;
+}
+
+.main_header swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.quick_item {
+  width: 25%;
+}
+
+.icon_item image {
+  border-radius: 50%;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.quick_body {
+  flex-wrap: wrap;
+  width: 96%;
+  padding: 20rpx 0;
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+}
+
+swiper.storeList {
+  height: 200rpx;
+}
+
+.ad_tuilist {
+  width: 33.33%;
+  display: flex;
+}
+
+.storeListItem {
+  width: 224rpx;
+}
+
+.ad_image {
+  width: 224rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.storeHeader {
+  border-left: 3px solid #ff8415;
+  padding: 0 20rpx;
+}
+
+.storeHeader.on {
+  border-left: 3px solid #8cb6fe;
+}
+
+.icon_item.on image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.quick_item.on {
+  display: inline-block;
+  text-align: center;
+}

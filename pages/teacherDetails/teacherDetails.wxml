@@ -1,0 +1,38 @@
+<!--pages/teacherDetails/teacherDetails.wxml-->
+<image src="{{teacherInfo.t_thumb}}" class="teacherImg" mode='aspectFill'></image>
+<view class='bg_f p_20 c_999 f_30'> 姓名：{{teacherInfo.user_name}}</view>
+<view class='teacher_body bg_f p_20'>
+  <view class='f_34 mb_20'>资质认证</view>
+  <view class='f_28 p_20 teacher_text bor_t'>{{teacherInfo.aptitude}}</view>
+</view>
+<view class='teacher_body bg_f p_20'>
+  <view class='f_34'>个人介绍</view>
+  <view class='f_28 p_20 teacher_text'>{{teacherInfo.t_content}}</view>
+</view>
+<view class='teacher_body bg_f p_20'>
+  <view class='flex_ja p_20 f_28'>
+    <view class='teacher_f on1 flex_faj {{active==1?"active":""}}' bindtap='bindTeacher' data-id="1">团课</view>
+    <view class='teacher_f on2 flex_faj {{active==2?"active":""}}' bindtap='bindTeacher' data-id="2">评价区</view>
+  </view>
+  <view class='listBody' wx:if="{{active==1}}">
+    <view wx:for="{{teacherCourse}}" class='p_20 {{index==0?"":"bor_t"}}' wx:key="{{list}}">
+      <view class='f_32'>{{item.title}}</view>
+      <view class='flex_cb'>
+        <view class='f_28 mt_10'>还可预约
+          <text class='c_ffb'>{{item.number}}</text>人</view>
+        <navigator class='teaButton c_f f_28' url='../courseDetails/courseDetails?id={{item.id}}' wx:if="{{item.yue==1}}">预约</navigator>
+      </view>
+      <view class='f_24 mt_20 c_999'>{{item.stime}}-{{item.etime}}</view>
+    </view>
+  </view>
+  <view wx:else class='listBody'>
+    <view wx:for="{{teacherEvaluate}}" class='p_20 {{index==0?"":"bor_t"}}' wx:key="{{list}}">
+      <view class='f_32'>{{item.title}}</view>
+      <view class='flex_cb'>
+        <view class='f_28 mt_10'>{{item.user_name}}</view>
+        <navigator class='teaButton c_f f_28' url='../comments/comments?id={{item.id}}'>查看评论</navigator>
+      </view>
+      <view class='f_24 mt_20 c_999'>{{item.status}}</view>
+    </view>
+  </view>
+</view>

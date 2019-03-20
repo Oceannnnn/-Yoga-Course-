@@ -1,0 +1,26 @@
+/* pages/comments/comments.wxss */
+
+.comments_img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.teacher_body {
+  width: 90%;
+  min-height: 200rpx;
+  margin: 20rpx auto;
+}
+
+.teacher_text {
+  text-indent: 20rpx;
+  line-height: 40rpx;
+}
+
+.man {
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

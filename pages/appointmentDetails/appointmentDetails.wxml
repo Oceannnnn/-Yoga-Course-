@@ -1,0 +1,43 @@
+<!--pages/appointmentDetails/appointmentDetails.wxml-->
+<view class='teacher_body p_20 bg_f'>
+  <view class='flex_cb p_20 bor_b f_32'>
+    课程
+    <view class='f_30'>{{info.title}}</view>
+  </view>
+  <view class='flex_cb p_20 bor_b f_32'>
+    老师
+    <view class='f_30'>{{info.user_name}}</view>
+  </view>
+  <view class='flex_cb p_20 bor_b f_32'>
+    商家
+    <view class='f_30'>{{info.store_name}}</view>
+  </view>
+  <view class='flex_cb p_20 bor_b f_32' wx:if="{{type==1}}">
+    人数
+    <view class='f_30'>{{}}</view>
+  </view>
+  <view class='flex_cb p_20 bor_b f_32'>
+    地点
+    <view class='f_30 location'>{{info.address}}</view>
+  </view>
+  <view class='flex_cb p_20 bor_b f_32'>
+    时间
+    <view class='f_30'>
+      <view>{{info.stime}}</view>
+      <view class='mt_20'>{{info.etime}}</view>
+    </view>
+  </view>
+  <view class='flex_cb p_20 bor_b f_32'>
+    订单时间
+    <view class='f_30'>{{info.title}}</view>
+  </view>
+  <view class='flex_cb p_20 f_32'>
+    状态
+    <view class='f_30'>{{info.status}}</view>
+  </view>
+  <view class='flex_cb p_20 f_32 bor_t' wx:if="{{type==2}}">
+    价格
+    <view class='f_30 price'>￥888</view>
+  </view>
+</view>
+<!-- <button class='s_foot' wx:if="{{type!=2}}">确定</button> -->

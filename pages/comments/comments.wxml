@@ -1,0 +1,12 @@
+<!--pages/comments/comments.wxml-->
+<view class='teacher_body bg_f p_20 pr' wx:for="{{list}}" wx:key="{{list}}">
+  <image class='man' src='{{item.satisfied}}'></image>
+  <view class='flex_i'>
+   <image class='comments_img' src='{{item.head}}'></image>
+   <view class='ml_20'>
+      <view class='f_34'>名字</view>
+      <view class='f_24 mt_10'>评分: <text class='c_ea5'>{{item.score}}分</text> </view>
+   </view>
+  </view>
+  <view class='f_28 p_20 teacher_text'>{{item.evaluate}}</view>
+</view>

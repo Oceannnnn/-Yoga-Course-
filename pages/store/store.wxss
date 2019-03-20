@@ -1,0 +1,18 @@
+/* pages/store/store.wxss */
+@import "../index/index.wxss";
+@import "../teacherDetails/teacherDetails.wxss";
+
+.store_icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.store_zhong {
+  width: 70%;
+}
+
+.store_icon.on {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+}

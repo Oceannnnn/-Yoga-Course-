@@ -1,0 +1,9 @@
+<!--pages/teacher/teacher.wxml-->
+<view wx:for="{{teacher}}" wx:key="{{teacher}}" class='teacher_body p_20 bg_f flex_i' bindtap='bindtap' data-id='{{item.id}}'>
+  <image src='{{item.head}}' class='teacher_img'></image>
+  <view class='teacher_right ml_20 f_32'>
+    <view>{{item.user_name}}</view>
+    <view class='f_28 c_999 mt_10'>{{item.store_name}}</view>
+    <view class='mt_10 f_30'>现有课程：{{item.course}}</view>
+  </view>
+</view>

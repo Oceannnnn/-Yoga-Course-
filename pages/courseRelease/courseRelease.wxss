@@ -1,0 +1,8 @@
+/* pages/courseRelease/courseRelease.wxss */
+@import "../setupStore/setupStore.wxss";
+page{
+  background: #fff;
+}
+textarea{
+  height: 180rpx;
+}

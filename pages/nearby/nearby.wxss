@@ -1,0 +1,33 @@
+/* pages/nearby/nearby.wxss */
+@import '../course/course.wxss';
+
+page {
+  background: #edebec;
+}
+
+.main_header swiper {
+  width: 300rpx;
+}
+
+.main_header swiper {
+  height: 375rpx;
+  width: 100%;
+}
+
+.main_header swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.bindtapStore {
+  margin: 0 auto 20rpx;
+}
+
+.detailsRight {
+  width: 60%;
+}
+
+.detailsImage {
+  width: 240rpx;
+  height: 180rpx;
+}

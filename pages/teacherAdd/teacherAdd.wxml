@@ -1,0 +1,6 @@
+<!--pages/teacherAdd/teacherAdd.wxml-->
+<view class='p_30 flex_i f_32 bor_b'>
+  <view class='input_left'>{{addName}}</view>
+  <input class='input ml_20 sheng f_28' value='{{number}}' bindinput='bindNumber' placeholder='{{placeholder}}'></input>
+</view>
+<button class='s_foot c_f f_32 mb_20' bindtap='bindtap'>{{foot}}</button>

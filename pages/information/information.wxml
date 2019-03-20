@@ -1,0 +1,36 @@
+<!--pages/information/information.wxml-->
+<view class='flex_i p_30 bor_b'>
+  <view class='mr_20 f_34 ml_20'>昵称</view>
+  <input class='input f_28 c_999' placeholder='请输入昵称' value='{{name}}' bindinput='bindName'></input>
+</view>
+<view class='flex_i p_30 bor_b'>
+  <view class='mr_20 f_34 ml_20'>手机号</view>
+  <input class='input f_28 c_999' placeholder='请输入手机号' value='{{phone}}' bindinput='bindPhone'>{{phone}}</input>
+</view>
+<view class='flex_cb p_30 bor_b'>
+  <view class='flex_i'>
+    <view class='f_34 mr_20 ml_20'>位置</view>
+    <input placeholder='请输入地址' class='ml_20 sheng f_28 input' value='{{address}}' bindtap='location'></input>
+  </view>
+  <view class='enter c_f f_28' bindtap='location'>设置定位</view>
+</view>
+<view class='flex_i p_30 bor_b'>
+  <view class='mr_20 f_34 ml_20'>ID</view>
+  <view class='input f_28 c_999'>{{id}}</view>
+</view>
+<button class='s_foot' bindtap='bindtap'>保存</button>
+<view class="my-dialog" hidden='{{comhidden}}'>
+  <view class="my-mask"></view>
+  <view class="my-container p_20">
+    <view class="content f_32 mt_20 mb_20">
+      检测到您没打开健康臻省心的定位权限，是否去设置打开？
+    </view>
+    <view class="btn-row flex_i f_32 p_20 bor_t">
+      <view class="cancel" bindtap='bindopensetting'>取消</view>
+      <view class="confirm pr">
+        <button class='formBtn' open-type="openSetting" bindopensetting="bindopensetting"></button>
+        确定
+      </view>
+    </view>
+  </view>
+</view>

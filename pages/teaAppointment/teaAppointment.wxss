@@ -1,0 +1,34 @@
+/* pages/teaAppointment/teaAppointment.wxss */
+@import "../appointment/appointment.wxss";
+
+.nav-scroll {
+  width: 100%;
+  color: #555;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-name {
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  width: 50%;
+  text-align: center;
+  padding: 30rpx 0;
+}
+
+.nav-hover {
+  color: #ff3799;
+  border-bottom: 2px solid #ff3799;
+}
+.body_scroll{
+  margin-top: 120rpx;
+}

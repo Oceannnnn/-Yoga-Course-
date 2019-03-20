@@ -1,0 +1,54 @@
+<!--pages/my/my.wxml-->
+<view class="p_20 bor_b my_header c_f">
+  <view wx:if="{{state!=1}}" class='mb_20 pr'>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='getUserInfo'> </button>
+    <view class='f_32 flex_af'>
+      <view class='pr avatar_info'>
+        <image class="avatar" src="../../images/wu.png"></image>
+      </view>
+      <view class="ml_20">未登录
+        <text class='f_28'>(请点击登录)</text>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="flex_af f_32">
+    <image class="avatar mb_20" src="{{userInfo.avatarUrl}}"></image>
+    <view class="ml_20">用户名：{{userInfo.nickName}}</view>
+  </view>
+</view>
+<view class='flex_i mb_20 f_30 bg_f'>
+  <view class="integral_item pr flex_ja">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='formBtn' wx:if="{{state==0}}"> </button>
+    <navigator class="formBtn" url='../balance/balance' wx:else></navigator>
+    <image src='../../images/my_e.png' class='heng_img mr_10'></image>
+    余额：{{balance}}
+  </view>
+  <view class="integral_item bor_l pr flex_ja">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='formBtn' wx:if="{{state==0}}"> </button>
+    <navigator class="formBtn" url='../teaAppointment/teaAppointment' wx:else></navigator>
+    <image src='../../images/my_yu.png' class='heng_img mr_10'></image>
+    课程预约
+  </view>
+</view>
+<view class='flex_cb p_30 pr f_30 bg_f'>
+  <button bindtap='getUserInfo' class="formBtn" wx:if="{{state==0}}"> </button>
+  <navigator url="../information/information" class="formBtn" wx:else> </navigator>
+  <view>个人信息</view>
+  <image src='../../images/last_Dawn.png' class='arrow'></image>
+</view>
+<view class='flex_cb p_30 pr f_30 bg_f bor_t'>
+  <button bindtap='getUserInfo' class="formBtn" wx:if="{{state==0}}"> </button>
+  <navigator url="../courseRelease/courseRelease" class="formBtn" wx:else> </navigator>
+  <view>发布课程</view>
+  <image src='../../images/last_Dawn.png' class='arrow'></image>
+</view>
+<view class='flex_cb p_30 pr f_30 bg_f bor_t'>
+  <button open-type="contact" class="formBtn">咨询</button>
+  <view>联系客服</view>
+  <image src='../../images/last_Dawn.png' class='arrow'></image>
+</view>
+<view class='flex_cb p_30 pr bor_t bg_f f_30' bindtap='out' wx:if="{{state==1}}">
+  <view>退出登录</view>
+  <image src='../../images/last_Dawn.png' class='arrow'></image>
+</view>
+<!-- <navigator class='flex_af f_28 p_20 my_about' url='../about/about'>技术支持 @ 风擎网络科技</navigator> -->

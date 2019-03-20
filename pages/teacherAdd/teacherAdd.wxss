@@ -1,0 +1,7 @@
+/* pages/teacherAdd/teacherAdd.wxss */
+@import "../setupStore/setupStore.wxss";
+.s_foot{
+  position: fixed;
+  bottom: 80rpx;
+  left: 5%;
+}

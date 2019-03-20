@@ -1,0 +1,27 @@
+/* pages/informationStore/informationStore.wxss */
+page{
+  background: #fff;
+}
+.s_foot {
+  margin-top: 100rpx;
+}
+
+.input_left {
+  width: 20%;
+}
+
+.input {
+  width: 76%;
+}
+
+.add_i {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.upload {
+  width: 140rpx;
+  height: 140rpx;
+  border: 1px solid #999;
+  border-radius: 10rpx;
+}

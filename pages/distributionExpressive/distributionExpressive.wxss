@@ -1,0 +1,4 @@
+/* pages/distributionExpressive/distributionExpressive.wxss */
+page{
+  background: #fff;
+}

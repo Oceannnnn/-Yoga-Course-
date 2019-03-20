@@ -1,0 +1,53 @@
+/**index.wxss**/
+
+.down_icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search_body {
+  padding: 10rpx 20rpx;
+  border-radius: 40rpx;
+  border: 1px solid #cecece;
+  width: 100%;
+  color: #cecece;
+}
+
+.search_header {
+  width: 20%;
+  text-align: center;
+}
+
+.phcolor {
+  color: #cecece;
+}
+
+.detailsImage {
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.detailsRight {
+  width: 63%;
+}
+
+.address_left {
+  width: 55%;
+}
+
+.address_right {
+  width: 35%;
+}
+
+.bindtapStore {
+  border-radius: 20rpx;
+  margin: 20rpx auto;
+  width: 92%;
+}
+
+.yuding {
+  background: #fc0;
+  padding: 10rpx 30rpx;
+  border-radius: 20rpx;
+}

@@ -1,0 +1,22 @@
+/* pages/information/information.wxss */
+
+page {
+  background: #fff;
+}
+
+.input {
+  width: 55%;
+  margin-left: 30rpx;
+}
+
+.s_foot {
+  margin-top: 260rpx;
+}
+
+/* .input_left {
+  width: 20%;
+} */
+.enter {
+  width: 10%;
+  text-align: center;
+}

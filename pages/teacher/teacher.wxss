@@ -1,0 +1,9 @@
+/* pages/teacher/teacher.wxss */
+.teacher_img{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+.teacher_right{
+  width: 75%;
+}

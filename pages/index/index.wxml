@@ -1,0 +1,65 @@
+<view class='main_header'>
+  <swiper indicator-dots interval="3000" duration="1000" autoplay='true' circular>
+    <block wx:for="{{imgUrls}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <swiper-item>
+        <image src="{{itemName.img_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='flex_i quick_body bg_f'>
+  <navigator class='quick_item flex_af f_28 pr' url='../nearby/nearby' open-type="switchTab">
+    <view class='mb_10 icon_item'>
+      <image src='{{store}}'></image>
+    </view>
+    <text>所有门店</text>
+  </navigator>
+  <navigator class='quick_item flex_af f_28 pr' url='../course/course'>
+    <view class='mb_10 icon_item'>
+      <image src='{{course}}'></image>
+    </view>
+    <text>课程导航</text>
+  </navigator>
+  <navigator class='quick_item flex_af f_28 pr' url='../teacher/teacher'>
+    <view class='mb_10 icon_item'>
+      <image src='{{teacher}}'></image>
+    </view>
+    <text>精选教师</text>
+  </navigator>
+  <view class='quick_item flex_af f_28 pr'>
+    <view class='mb_10 icon_item'>
+      <image src='{{student}}'></image>
+    </view>
+    <text>学员风采</text>
+  </view>
+</view>
+<view class='f_32  mt_20 flex_cb bg_f p_20' wx:if="{{storeList!=''}}">
+  <view class='storeHeader'>好课推荐</view>
+  <navigator class='f_24 c_999' url='../course/course'>更多></navigator>
+</view>
+<view class='flex_i p_20 f_28 pr bg_f' wx:if="{{storeList!=''}}">
+  <swiper interval="3000" duration="1000" autoplay='true' circular class='w100 storeList'>
+    <block wx:for="{{storeList}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <swiper-item>
+        <view class="ad_tuilist" scroll-x style="width: 100%">
+          <view class="pr storeListItem {{idx>0?'ml_20':''}}" wx:for-index="idx" wx:for="{{itemName.item}}" wx:key="" bindtap='bindtapStore' data-id='{{item.id}}'>
+            <image src="{{item.c_thumb}}" class="ad_image" mode='aspectFill'></image>
+            <view class='mt_10 sheng'>{{item.title}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='f_32  mt_20 flex_cb bg_f p_20' wx:if="{{manList!=''}}">
+  <view class='storeHeader on'>教师推荐</view>
+  <navigator class='f_24 c_999' url='../teacher/teacher'>更多></navigator>
+</view>
+<scroll-view class="scroll-view_H p_20 f_28 pr bg_f mb_20" scroll-x style="width: 100%">
+  <view class='quick_item flex_af f_28 pr on' wx:for="{{manList}}" wx:key="{{manList}}" data-id="{{item.id}}" bindtap='manList'>
+    <view class='mb_10 icon_item on'>
+      <image src='{{item.head}}'></image>
+    </view>
+    <text>{{item.user_name}}</text>
+  </view>
+</scroll-view>

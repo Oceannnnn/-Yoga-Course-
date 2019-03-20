@@ -1,0 +1,42 @@
+<!--pages/nearby/nearby.wxml-->
+<view class='bg_f flex_i f_32 p_20 bor_t'>
+  <!-- <view class='mr_10 sheng search_header'>泉州市</view> -->
+  <view class='search_body flex_i f_28'>
+    <image class='down_icon mr_20' src='../../images/search1.png'></image>
+    <input placeholder='搜索附近的瑜伽店' placeholder-class="phcolor" bindconfirm='bindconfirm'></input>
+  </view>
+</view>
+<view class='main_header'>
+  <swiper indicator-dots interval="3000" duration="1000" autoplay='true' circular>
+    <block wx:for="{{imgUrls}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <swiper-item>
+        <image src="{{itemName.img_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='p_20 f_30 bor_top'>各式瑜伽馆任你选</view>
+<view class='bindtapStore bg_f flex_i p_20 pr' wx:for-index="idx" wx:for="{{adList}}" wx:key="" bindtap='bindtapStore' data-id='{{item.id}}'>
+  <image src='{{item.s_thumb}}' class='detailsImage' mode='aspectFill'></image>
+  <view class='detailsRight ml_20'>
+    <view class='sheng f_32'>{{item.store_name}}</view>
+    <view class='f_28 sheng mt_10'>营业时间：{{item.open_time}}-{{item.end_time}}</view>
+    <view class='f_28 sheng mt_10 mb_10'>{{item.address}}</view>
+    <view class='f_24 c_999'>距离{{item.distance}}km</view>
+  </view>
+</view>
+<view class="my-dialog" hidden='{{comhidden}}'>
+  <view class="my-mask"></view>
+  <view class="my-container p_20">
+    <view class="content f_32 mt_20 mb_20">
+      检测到您没打开健康臻省心的定位权限，是否去设置打开？
+    </view>
+    <view class="btn-row flex_i f_32 p_20 bor_t">
+      <view class="cancel" bindtap='bindopensetting'>取消</view>
+      <view class="confirm pr">
+        <button class='formBtn' open-type="openSetting" bindopensetting="bindopensetting"></button>
+        确定
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,2 @@
+/* pages/storeMy/storeMy.wxss */
+@import "../my/my.wxss"

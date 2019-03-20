@@ -1,0 +1,17 @@
+/* pages/team/team.wxss */
+
+page {
+  background: #fff;
+}
+
+.team_img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.team_img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}

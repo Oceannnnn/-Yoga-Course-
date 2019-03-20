@@ -1,0 +1,65 @@
+<!--pages/courseRelease/courseRelease.wxml-->
+<view class='p_20 flex f_32 bor_b'>
+  <view class='input_left'>图片上传</view>
+  <view class='f_24 c_999 upload flex_faj c_999 pr' bindtap='upload' data-count='1'>
+    <image class='img' src='{{st_pic}}' wx:if="{{st_pic!=''}}"></image>
+    <image class="add_i" src='../../images/add_i.png' wx:if="{{st_pic==''}}"></image>
+  </view>
+</view>
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>课程名称</view>
+  <input placeholder='请输入课程名称' class='input ml_20 sheng f_28' value='{{title}}' bindinput='bindName'></input>
+</view>
+<view class='p_20 flex f_32 bor_bom10'>
+  <view class='input_left'>轮播图片</view>
+  <view class='input ml_20'>
+    <view class='f_28 c_999'>为了保证显示效果，建议上传3张以上图片</view>
+    <view class='flex_f mt_20'>
+      <block wx:key="imgbox" wx:for="{{imgbox}}" wx:for-index="index">
+        <view class='pr mr_10 mb_10'>
+          <view class='upload pr on'>
+            <image class='img' src='{{item.image}}'></image>
+            <view class='img-de pr' bindtap='delImage' data-deindex='{{index}}'>
+              <image class='img' src='../../images/cha.png'></image>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class='upload flex_faj on' bindtap='upload' data-count='9'>
+        <image class="add_i" src='../../images/add_i.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>开始时间</view>
+  <view class='search_body flex_i f_28 on'>
+    <picker mode="date" value="{{date}}" start="2019-01-01" end="" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{s_time}}" end="" bindchange="bindTimeChange" class='ml_20 c_999'>
+      <view class="picker">
+        {{s_time}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>课程时长</view>
+  <input placeholder='请输入课程时长' class='input ml_20 sheng f_28' value='{{duration}}' type="digit" bindinput='bindDuration'></input>
+</view>
+<view class='p_20 flex f_32 bor_b'>
+  <view class='input_left'>课程介绍</view>
+  <textarea placeholder='请输入课程介绍' class='input ml_20 sheng f_28' value='{{c_content}}' bindinput='bindContent'></textarea>
+</view>
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>课程费用</view>
+  <input placeholder='请输入课程费用' class='input ml_20 sheng f_28' value='{{price}}' bindinput='bindPrice'></input>
+</view>
+<view class='p_20 flex_i f_32 bor_b'>
+  <view class='input_left'>课程人数</view>
+  <input placeholder='请输入课程人数' class='input ml_20 sheng f_28' type="number" value='{{num}}' bindinput='bindNum'></input>
+</view>
+<button class='s_foot c_f f_32 mb_20' bindtap='bindtap'>提交</button>

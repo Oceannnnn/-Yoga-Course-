@@ -1,0 +1,58 @@
+<!--pages/distribution/distribution.wxml-->
+<view class='p_20 disHeader c_f'>
+  <view class="flex_i p_20 bor_b f_34">
+    <image class="avatar mr_20" src="{{userInfo.avatarUrl}}"></image>
+    <view>{{userInfo.nickName}}</view>
+  </view>
+  <view class='flex_cb p_20'>
+    <view class='f_30'>
+      可提现佣金
+      <view class='f_32 mt_20'>{{can_money}}元</view>
+    </view>
+    <view class='postal f_32' data-type="2" bindtap="goCommission">提现</view>
+  </view>
+</view>
+<view class='disbosy flex_i f_32 bor_bom'>
+  <view class='flex_af integral_item'>
+    已提现的佣金
+    <view class='c_029 mt_10'>{{yet_money}}元</view>
+  </view>
+  <view class='flex_af integral_item bor_l'>
+    未结算佣金
+    <view class='c_ff3 mt_10'>{{un_money}}元</view>
+  </view>
+</view>
+<view class='disfooter flex_i f_32'>
+  <view class='flex_faj disfooter_item bor_b bor_r' bindtap='toMoney'>
+    <image src='../../images/d_1.png' class='d_img'></image>
+    分销佣金
+    <view class='c_ea5 mt_10'>{{money}}元</view>
+  </view>
+  <view class='flex_faj disfooter_item bor_b pr' bindtap='toExpressive' data-type="1">
+    <image src='../../images/d_2.png' class='d_img'></image>
+    提现明细
+  </view>
+  <navigator class='flex_faj disfooter_item bor_r pr bor_b' url='../team/team'>
+    <image src='../../images/d_3.png' class='d_img'></image>
+    我的团队
+    <view class='c_ea5 mt_10'>{{num}}人</view>
+  </navigator>
+  <navigator class='flex_faj disfooter_item bor_r pr bor_b' url='../distributionQRCode/distributionQRCode'>
+    <image src='../../images/d_4.png' class='d_img'></image>
+    推广二维码
+  </navigator>
+  <!-- <navigator class='flex_faj disfooter_item bor_r pr bor_b' url='../distributionIllustrate/distributionIllustrate'>
+    <form report-submit='true' class='formBtn' bindsubmit='bindsubmit'>
+      <button class='formBtn' form-type='submit'></button>
+    </form>
+    <i class="iconfont icon-shuoming c_ea5"></i>
+    佣金提现说明
+  </navigator>
+  <navigator class='flex_faj disfooter_item bor_r pr bor_b' url='../distributionDan/distributionDan'>
+    <form report-submit='true' class='formBtn' bindsubmit='bindsubmit'>
+      <button class='formBtn' form-type='submit'></button>
+    </form>
+    <i class="iconfont icon-xiadan c_ea5"></i>
+    下单中心
+  </navigator> -->
+</view>

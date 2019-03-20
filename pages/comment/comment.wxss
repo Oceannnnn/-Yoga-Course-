@@ -1,0 +1,72 @@
+/* pages/comment/comment.wxss */
+page{
+  background: #fff;
+}
+textarea {
+  background: #f3f3f3;
+  width: 90%;
+  margin: 20rpx auto;
+  height: 300rpx;
+  border-radius: 20rpx;
+  border: 1px solid #ccc;
+}
+
+.star-image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+}
+
+.starsitem {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.zhao {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.commen_footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 30rpx 0;
+}
+
+radio .wx-radio-input {
+  /* 自定义样式.... */
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  border: 2rpx solid #000;
+  background: transparent;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+radio .wx-radio-input.wx-radio-input-checked {
+  border: 2rpx solid #000;
+  background: #000;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 30rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: #000;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.radio{
+  margin-right: 60rpx;
+}
